@@ -4,6 +4,7 @@ var trash = document.getElementsByClassName("fa-trash");
 
 Array.from(thumbUp).forEach(function(element) {
       element.addEventListener('click', function(){
+        const dataSetID = this.parentNode.parentNode.childNodes[1].dataset.msgId
         const name = this.parentNode.parentNode.childNodes[1].innerText
         const msg = this.parentNode.parentNode.childNodes[3].innerText
         //covert every string to float num 
@@ -13,6 +14,7 @@ Array.from(thumbUp).forEach(function(element) {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
+            'userID':dataSetID,
             'name': name,
             'msg': msg,
             'thumbUp':thumbUp,
@@ -31,6 +33,7 @@ Array.from(thumbUp).forEach(function(element) {
 
 Array.from(thumbDown).forEach(function(element) {
       element.addEventListener('click', function(){
+        const dataSetID = this.parentNode.parentNode.childNodes[1].dataset.msgId
         const name = this.parentNode.parentNode.childNodes[1].innerText
         const msg = this.parentNode.parentNode.childNodes[3].innerText
         const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
@@ -39,6 +42,7 @@ Array.from(thumbDown).forEach(function(element) {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
+            'userID':dataSetID,
             'name': name,
             'msg': msg,
             'thumbUp':thumbUp,
@@ -57,6 +61,7 @@ Array.from(thumbDown).forEach(function(element) {
 
 Array.from(trash).forEach(function(element) {
       element.addEventListener('click', function(){
+        const dataSetID = this.parentNode.parentNode.childNodes[1].dataset.msgId
         const name = this.parentNode.parentNode.childNodes[1].innerText
         const msg = this.parentNode.parentNode.childNodes[3].innerText
         fetch('trash', {
@@ -65,6 +70,7 @@ Array.from(trash).forEach(function(element) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
+            'userID':dataSetID,
             'name': name,
             'msg': msg
           })
