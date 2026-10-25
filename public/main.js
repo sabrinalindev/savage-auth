@@ -14,6 +14,7 @@ Array.from(thumbUp).forEach(function(element) {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
+            //_id: new ObjectId(req.body.userID)
             'userID':dataSetID,
             'name': name,
             'msg': msg,

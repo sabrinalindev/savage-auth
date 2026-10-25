@@ -68,10 +68,10 @@ module.exports = function(app, passport, db, ObjectId) {
     })
     //trash bin 
      app.delete('/trash', (req, res) => {
-      console.log(req.body.ObjectId)
+      console.log(req.body.userID)
       db.collection('messages').findOneAndDelete({
-       
-        name: req.body.name, msg: req.body.msg
+        _id: new ObjectId(req.body.userID)
+        // name: req.body.name, msg: req.body.msg
       }, (err, result) => {
         if (err) return res.send(500, err)
         res.send('Message deleted!')
