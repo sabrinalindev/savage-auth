@@ -1,13 +1,24 @@
-## Installation
+## 21 Savage Fan 
 
-1. Clone repo
-2. run `npm install`
+Housetask is an app that ensure housework would be assigned by whom live under the roof indivisually. 
 
-## Usage
+## Demo
+Check out here:
+Live: 
+[Site](https://savage-auth-pdn2.onrender.com/)
 
-1. run `node server.js`
-2. Navigate to `localhost:8080`
+![Landing Page](public/img/landingPage.jpeg)
+![SignUp Page](public/img/signup.jpeg)
+![Profile](public/img/profile.jpeg)
 
-## Credit
+## Features
 
-Modified from Scotch.io's auth tutorial
+- Website for 21 Savage Fan to leave comments
+- Users can like, dislike and delete comments
+
+## Built with
+
+- Node.js and Express
+- MongoDB with Mongoose
+- EJS templates
+- Plain JavaScript and CSS
