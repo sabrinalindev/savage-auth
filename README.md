@@ -1,6 +1,6 @@
 ## 21 Savage Fan 
 
-Housetask is an app that ensure housework would be assigned by whom live under the roof indivisually. 
+21 Savage Fan App is a full-stack web application where fans can create an account, leave comments and interact with other fans through likes and dislikes. The app uses authentication to manage user access and MongoDB to store user information and comments.
 
 ## Demo
 Check out here:
